@@ -16,6 +16,7 @@ Produksjon: <https://appventure.thorkildstray.no>
 - eksterne invitasjonslenker med e-postutsending
 - påmelding, avmelding og deltakerliste for offentlige arrangementer
 - valgfri kapasitet, venteliste og automatisk opprykk ved avmelding
+- kommentarer på arrangementer med tilgangskontroll og moderering
 - kontosletting med opprydding av tilknyttede data og bilder
 
 ## Teknologi
