@@ -1,23 +1,63 @@
 # Appventure
 
-Frontend-prototype for lokale arrangementer i Oslo. Prosjektet bruker Vite og er
-forberedt for Supabase-autentisering, PostgreSQL og fillagring.
+Appventure er en publisert MVP for å finne, opprette og invitere til lokale
+arrangementer i Oslo.
+
+Produksjon: <https://appventure.thorkildstray.no>
+
+## Funksjoner
+
+- registrering, e-postbekreftelse, innlogging og glemt passord
+- profiler med bilde, bosted og interesser
+- offentlige og private arrangementer med kartposisjon og bilde
+- redigering og sletting av egne arrangementer
+- venner og interne invitasjoner
+- eksterne invitasjonslenker med e-postutsending
+- påmelding, avmelding og deltakerliste for offentlige arrangementer
+- kontosletting med opprydding av tilknyttede data og bilder
+
+## Teknologi
+
+- Vite og JavaScript
+- Supabase Auth, Postgres, Storage og Edge Functions
+- Vercel
+- Resend
+- Leaflet og OpenStreetMap
 
 ## Lokal utvikling
 
 1. Installer avhengigheter med `npm install`.
 2. Kopier `.env.example` til `.env.local`.
-3. Fyll inn prosjekt-URL og `publishable key` fra Supabase.
-4. Start utviklingsserveren med `npm run dev`.
+3. Legg inn Supabase-prosjektets URL og publishable key.
+4. Start med `npm run dev`.
 
-Prototypen fortsetter å bruke lokale demodata frem til autentisering og API-laget
-er koblet til databasen. Den kan derfor også bygges uten Supabase-variablene.
+```env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
+```
 
-## Databaseskjema
+Ikke legg secret key, service role key eller Resend API-nøkler i `VITE_*`.
+Variabler med dette prefikset blir tilgjengelige i nettleseren.
 
-Første migrasjon ligger i `supabase/migrations`. Den oppretter profiler,
-arrangementer og invitasjoner, samt tilgangsregler for offentlige og private
-arrangementer.
+## Database
 
-Migrasjonen skal kjøres mot et eget utviklingsprosjekt før frontend kobles til.
-Ikke legg service role-nøkler eller andre serverhemmeligheter i `VITE_*`-variabler.
+SQL-migrasjonene ligger i `supabase/migrations` og skal kjøres i stigende
+filrekkefølge. De oppretter tabeller, funksjoner, Storage-policyer og Row Level
+Security for profiler, arrangementer, invitasjoner, venner og påmeldinger.
+
+## Edge Functions
+
+- `send-event-invitation` sender eksterne invitasjoner gjennom Resend.
+- `delete-account` sletter bruker, relaterte data og opplastede filer.
+
+Funksjonene krever gyldig bruker-JWT. Leverandørnøkler lagres som Supabase Edge
+Function Secrets og skal aldri ligge i Git.
+
+## Produksjonsbygg
+
+```sh
+npm run build
+```
+
+Vercel bygger automatisk ved push til `main`. Produksjonsmiljøet må inneholde
+`VITE_SUPABASE_URL` og `VITE_SUPABASE_PUBLISHABLE_KEY`.
