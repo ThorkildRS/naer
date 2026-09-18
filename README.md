@@ -7,7 +7,8 @@ Produksjon: <https://appventure.thorkildstray.no>
 
 ## Funksjoner
 
-- registrering, e-postbekreftelse, innlogging og glemt passord
+- registrering med aldersbekreftelse og versjonert aksept av brukervilkår
+- e-postbekreftelse, ny bekreftelsesmail, innlogging og glemt passord
 - profiler med bilde, bosted og interesser
 - offentlige og private arrangementer med kartposisjon og bilde
 - egen arrangementsvisning med detaljer, handlinger og direkte delingslenke
@@ -18,6 +19,7 @@ Produksjon: <https://appventure.thorkildstray.no>
 - eksterne påmeldingslenker og lagrede arrangementer på Min side
 - valgfri kapasitet, venteliste og automatisk opprykk ved avmelding
 - kommentarer på arrangementer med tilgangskontroll og moderering
+- tilgjengelige brukervilkår og personvernerklæring
 - kontosletting med opprydding av tilknyttede data og bilder
 
 ## Teknologi
