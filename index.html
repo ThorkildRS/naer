@@ -42,6 +42,7 @@ OpenStreetMap brukes til kartvisning.
 <div class="map-help" id="map-help"><div class="eyebrow">Ut av døra. Inn i byen.</div><h2>Hva har du lyst til<br>å gjøre i dag?</h2><p>Velg interessene dine, og finn små<br>og store opplevelser i nærheten.</p></div><div class="map-count" id="map-count" hidden></div>
 <div id="map-error" class="map-error" role="status" hidden></div><div class="pick-bar" id="pick-bar" hidden><strong>Hvor skjer det?</strong><p id="pick-instruction">Klikk i kartet for å plassere eventet.</p><button id="pick-done" class="primary" disabled>Bruk dette stedet</button> <button class="secondary" id="pick-cancel">Tilbake</button></div>
 </section></main>
+<dialog class="event-detail-dialog" id="event-detail-dialog" aria-labelledby="event-detail-title"><div id="event-detail-content"></div></dialog>
 <dialog class="modal drawer" id="create-dialog" aria-labelledby="create-title"><div class="modal-head"><h2 id="create-title">Noe på gang?</h2><button class="close" data-close="create-dialog" aria-label="Lukk skjema"><svg class="icon"><use href="#i-close"/></svg></button></div><form class="modal-body" id="event-form"><p class="subtle" style="margin-top:0;margin-bottom:22px">Inviter byen, eller bare dine nærmeste.</p>
 <label class="field">Tittel<input name="title" required maxlength="90" placeholder="Hva skal skje?"></label>
 <label class="field">Kategori<select name="category" required id="category-select"></select></label>

@@ -10,6 +10,7 @@ Produksjon: <https://appventure.thorkildstray.no>
 - registrering, e-postbekreftelse, innlogging og glemt passord
 - profiler med bilde, bosted og interesser
 - offentlige og private arrangementer med kartposisjon og bilde
+- egen arrangementsvisning med detaljer, handlinger og direkte delingslenke
 - redigering og sletting av egne arrangementer
 - venner og interne invitasjoner
 - eksterne invitasjonslenker med e-postutsending
