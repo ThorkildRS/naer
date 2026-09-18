@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Fant ikke siden · Appventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;550;650;750&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:light;--ink:#222324;--muted:#696c67;--orange:#ffaa1e;--orange-dark:#e6960f;--paper:#fff;--soft:#f7f8f4}
+    *{box-sizing:border-box}
+    body{margin:0;min-width:280px;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif}
+    main{min-height:100svh;display:grid;place-items:center;padding:40px 24px}
+    .not-found{width:min(100%,560px);text-align:center}
+    .illustration{display:block;width:min(78vw,390px);height:auto;margin:0 auto 18px}
+    .code{display:inline-block;margin:0 0 10px;color:#9a6815;font-size:10px;font-weight:750;letter-spacing:1.8px;text-transform:uppercase}
+    h1{margin:0;font-size:clamp(27px,5vw,42px);line-height:1.12;letter-spacing:-1.4px;font-weight:650}
+    p{max-width:410px;margin:13px auto 24px;color:var(--muted);font-size:13px;line-height:1.7}
+    a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 17px;border:1px solid #f2a018;border-radius:7px;background:var(--orange);color:var(--ink);font-size:12px;font-weight:650;text-decoration:none;transition:background 120ms,border-color 120ms,transform 120ms}
+    a:hover{background:var(--orange-dark);border-color:var(--orange-dark);transform:translateY(-1px)}
+    a:focus-visible{outline:3px solid #31322f;outline-offset:3px}
+    @media(max-height:690px){main{padding-block:22px}.illustration{width:min(52vh,330px);margin-bottom:10px}p{margin-block:9px 16px}}
+    @media(max-width:420px){main{padding-inline:20px}.illustration{width:min(88vw,340px)}h1{letter-spacing:-.9px}}
+    @media(prefers-reduced-motion:reduce){a{transition:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="not-found" aria-labelledby="not-found-title">
+      <img class="illustration" src="/404-rev.png" alt="En rev som leter med forstørrelsesglass" width="1254" height="1254">
+      <span class="code">404 · Siden finnes ikke</span>
+      <h1 id="not-found-title">Her fant vi visst ingenting</h1>
+      <p>Lenken kan være gammel, eller siden kan ha blitt flyttet. Gå tilbake og finn noe å gjøre i nærheten.</p>
+      <a href="/">Tilbake til forsiden <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+</body>
+</html>
